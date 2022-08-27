@@ -359,7 +359,7 @@ hr {
   padding: 15px;
   border-radius: 8px;
   border: none;
-  margin-bottom: 15px;
+  margin: 15px;
 }
 
 .action-button {
@@ -407,7 +407,12 @@ textarea.form-input {
   padding: 15px;
 }
 
-
+.error{
+  margin-left: 30px;
+  color: red;
+  font-size: 12px;
+  font-weight: bold;
+}
 
 /*====== Media-Queries ======*/
 @media (min-width: 768px) {

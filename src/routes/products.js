@@ -6,12 +6,13 @@ const router = express.Router();
 const productsController = require('../controllers/productsController');
 const upload = require('../middlewares/uploadFiles')
 
+const productValidator = require('../validations/productsValidations')
 /*** GET ALL PRODUCTS ***/ 
 router.get('/', productsController.index); 
 
 /*** CREATE ONE PRODUCT ***/ 
 router.get('/create', productsController.create); 
-router.post('/store', upload.single('imagen'),productsController.store); 
+router.post('/store', upload.single('imagen'),productValidator,productsController.store); 
 
 
 /*** GET ONE PRODUCT ***/ 
